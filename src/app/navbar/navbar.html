@@ -1,1 +1,9 @@
-<p>navbar works!</p>
+<nav>
+	<a routerLink="/" style="font-weight:bold;">AuthDemo</a>
+	<span style="margin-left:20px;">
+		<a *ngIf="!isAuth" routerLink="/login">Login</a>
+		<a *ngIf="!isAuth" routerLink="/register">Registro</a>
+		<a *ngIf="isAuth" routerLink="/profile">Perfil</a>
+		<button *ngIf="isAuth" (click)="logout()">Logout</button>
+	</span>
+</nav>

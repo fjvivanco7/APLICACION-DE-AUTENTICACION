@@ -1,59 +1,75 @@
-# AuthDemo
+# APLICACION-DE-AUTENTICACION
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.1.
+Aplicación web fullstack de autenticación con Angular (frontend) y Node.js/Express (backend), JWT y estilos modernos con Bootstrap.
 
-## Development server
+## Características principales
 
-To start a local development server, run:
+- Registro de usuarios con validación y feedback visual.
+- Inicio de sesión seguro con JWT.
+- Protección de rutas (perfil solo para usuarios autenticados).
+- Logout seguro y feedback visual.
+- Navegación fluida y moderna (SPA) usando Angular Router.
+- Diseño responsive y atractivo con Bootstrap y gradientes personalizados.
+- Barra de navegación dinámica según autenticación.
+- Página principal con acceso rápido a registro e inicio de sesión.
+- Formularios estilizados, mensajes de error y éxito.
+- Iconos modernos y experiencia de usuario mejorada.
 
-```bash
-ng serve
+## Estructura del proyecto
+
+```
+├── backend/           # Servidor Node.js/Express (API REST, JWT, usuarios)
+├── src/
+│   └── app/
+│       ├── home/      # Página principal
+│       ├── login/     # Login de usuario
+│       ├── register/  # Registro de usuario
+│       ├── profile/   # Perfil protegido
+│       ├── navbar/    # Barra de navegación
+│       ├── auth.ts    # Servicio de autenticación Angular
+│       ├── auth-guard.ts # Guard para rutas protegidas
+│       └── ...
+├── styles.scss        # Estilos globales y Bootstrap
+├── angular.json       # Configuración Angular
+├── package.json       # Dependencias frontend
+└── README.md          # Este archivo
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Instalación y ejecución
 
-## Code scaffolding
+### Backend (Node.js/Express)
+1. Ve a la carpeta `backend`:
+   ```sh
+   cd backend
+   npm install
+   node server.js
+   ```
+   El backend corre en http://localhost:4000
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Frontend (Angular)
+1. Desde la raíz del proyecto:
+   ```sh
+   npm install
+   npm start
+   ```
+   La app corre en http://localhost:4200
 
-```bash
-ng generate component component-name
-```
+## Uso
+- Regístrate con un usuario y contraseña.
+- Inicia sesión con tus credenciales.
+- Accede a tu perfil protegido.
+- Cierra sesión desde el perfil.
+- Navega entre login, registro y home usando los botones y la barra.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Tecnologías usadas
+- Angular 17+ (SPA, routing, standalone components)
+- Node.js + Express (API REST, JWT, bcryptjs)
+- Bootstrap 5 (estilos y responsive)
+- Bootstrap Icons (iconos)
 
-```bash
-ng generate --help
-```
+## Autoría y créditos
+- Desarrollado automáticamente con GitHub Copilot y personalización manual.
+- Imágenes e iconos: flaticon.com, freepik.com
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+¡Listo para usar y personalizar! Si tienes dudas o quieres mejorar la app, abre un issue o contribuye.

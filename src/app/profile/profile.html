@@ -1,5 +1,16 @@
-<h2>Perfil</h2>
-<div *ngIf="user">
-	<p><strong>Usuario:</strong> {{ user.username }}</p>
+<div class="container py-5 d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card shadow p-4 w-100" style="max-width: 480px;">
+    <div class="text-center mb-3">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="profile icon" style="width: 72px; height: 72px;">
+      <h2 class="fw-bold mt-2 mb-1" style="color: #2a2a72; font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;">¡Bienvenido!</h2>
+      <p class="lead mb-3" style="color: #444;">Has iniciado sesión correctamente.<br>Disfruta de tu experiencia en AuthApp.</p>
+    </div>
+    <div *ngIf="user" class="mb-3 text-center">
+      <p class="mb-1"><strong>Usuario:</strong> {{ user.username }}</p>
+    </div>
+    <div *ngIf="error" class="alert alert-danger py-1 px-2 mt-2 mb-0 text-center">{{ error }}</div>
+    <button (click)="logout()" class="btn btn-danger w-100 mt-3 fw-bold">
+      <i class="bi bi-box-arrow-right me-2"></i> Cerrar sesión
+    </button>
+  </div>
 </div>
-<div *ngIf="error" style="color:red;">{{ error }}</div>

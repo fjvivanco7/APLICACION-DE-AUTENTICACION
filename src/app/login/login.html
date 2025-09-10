@@ -1,16 +1,23 @@
-<h2>Iniciar sesión</h2>
-<form (ngSubmit)="onSubmit()" #loginForm="ngForm">
-	<div>
-		<label>Usuario:</label>
-		<input type="text" name="username" [(ngModel)]="username" required />
-	</div>
-	<div>
-		<label>Contraseña:</label>
-		<input type="password" name="password" [(ngModel)]="password" required />
-	</div>
-	<button type="submit">Entrar</button>
-	<div *ngIf="error" style="color:red;">{{ error }}</div>
-</form>
-<p>
-	¿No tienes cuenta? <a routerLink="/register">Regístrate</a>
-</p>
+<div class="d-flex justify-content-center align-items-center min-vh-100 bg-transparent">
+  <div class="card shadow p-4" style="max-width: 400px; width: 100%;">
+    <div class="text-center mb-3">
+      <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="login icon" style="width: 64px; height: 64px;">
+      <h2 class="fw-bold mt-2 mb-0" style="color: #2a2a72; font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;">Iniciar sesión</h2>
+    </div>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="mb-3 text-start">
+        <label class="form-label">Usuario</label>
+        <input type="text" name="username" [(ngModel)]="username" required class="form-control" autocomplete="username" />
+      </div>
+      <div class="mb-3 text-start">
+        <label class="form-label">Contraseña</label>
+        <input type="password" name="password" [(ngModel)]="password" required class="form-control" autocomplete="current-password" />
+      </div>
+      <button type="submit" class="btn btn-primary w-100 mb-2">Entrar</button>
+      <div *ngIf="error" class="alert alert-danger py-1 px-2 mt-2 mb-0 text-center">{{ error }}</div>
+    </form>
+    <div class="text-center mt-3">
+      <span>¿No tienes cuenta?</span> <a routerLink="/register">Regístrate</a>
+    </div>
+  </div>
+</div>

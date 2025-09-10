@@ -68,7 +68,7 @@ Aplicación web fullstack de autenticación con Angular (frontend) y Node.js/Exp
 - Bootstrap Icons (iconos)
 
 ## Autoría y créditos
-- Desarrollado automáticamente con GitHub Copilot y personalización manual.
+- Desarrollado por Fernando Vivanco.
 - Imágenes e iconos: flaticon.com, freepik.com
 
 ---

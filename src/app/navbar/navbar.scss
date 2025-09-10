@@ -1,0 +1,32 @@
+.custom-navbar {
+  background: linear-gradient(90deg, #2a2a72 0%, #009ffd 100%) !important;
+  box-shadow: 0 2px 8px rgba(42,42,114,0.08);
+}
+
+.custom-brand {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.custom-brand:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.navbar-logo {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.10));
+  transition: transform 0.2s;
+}
+
+.custom-brand:hover .navbar-logo {
+  transform: scale(1.15) rotate(8deg);
+}

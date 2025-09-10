@@ -1,1 +1,16 @@
-<p>login works!</p>
+<h2>Iniciar sesión</h2>
+<form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+	<div>
+		<label>Usuario:</label>
+		<input type="text" name="username" [(ngModel)]="username" required />
+	</div>
+	<div>
+		<label>Contraseña:</label>
+		<input type="password" name="password" [(ngModel)]="password" required />
+	</div>
+	<button type="submit">Entrar</button>
+	<div *ngIf="error" style="color:red;">{{ error }}</div>
+</form>
+<p>
+	¿No tienes cuenta? <a routerLink="/register">Regístrate</a>
+</p>

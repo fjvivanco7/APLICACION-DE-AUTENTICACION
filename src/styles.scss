@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+  min-height: 100vh;
+}
+
+.navbar {
+  box-shadow: 0 2px 8px rgba(42,42,114,0.08);
+}
+
+.btn-success {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  border: none;
+}
+
+.btn-outline-primary {
+  border-color: #2a2a72;
+  color: #2a2a72;
+}
+
+.btn-outline-primary:hover {
+  background: #2a2a72;
+  color: #fff;
+}
+
+h1, .display-3 {
+  letter-spacing: -1px;
+}
